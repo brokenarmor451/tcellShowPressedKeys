@@ -36,7 +36,7 @@ func main() {
 				os.Exit(0)
 			}
 			
-			ShowPressedKeys(x + 10  , y + 10, screen, event.Rune())
+			ShowPressedKeys(x + 10  , (y + 10) / 2 - 4, screen, event.Rune())
 			x++
 		}
 	}
@@ -44,6 +44,6 @@ func main() {
 
 func ShowPressedKeys(X, Y int, Screen tcell.Screen, Key rune) {
 	style := tcell.StyleDefault.Background(tcell.ColorBlack).Foreground(tcell.ColorWhite)
-	Screen.SetContent(X, Y / 2 - 4, Key, nil, style)
+	Screen.SetContent(X, Y, Key, nil, style)
 }
 
