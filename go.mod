@@ -1,4 +1,4 @@
-module showPressedKeys
+module github.com/brokenarmor451/tcellShowPressedKeys
 
 go 1.18
 
